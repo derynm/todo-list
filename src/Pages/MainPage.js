@@ -17,20 +17,26 @@ export const MainPage = () => {
     }
   }, []);
 
-  
+  //menambahkan task
   const addTask = (e) => {
+    //cek apakah ada data dalam state TaskInput
     if (TaskInput) {
+      //buat objek untuk tampung task
       const newTask = { id: new Date().getTime().toString(), title: TaskInput };
+      //masukan objek kedalam state Task
       setTask([...Task, newTask]);
+      //masukan state task ke dalam local storage dan di buat menjadi string
       localStorage.setItem("localTasks", JSON.stringify([...Task, newTask]));
       setTaskInput("");
     }
   };
 
+  //menampilkan data yang ada pada local storage
   const showTask = (data) => {
     let dataTask = data;
-
+    //map data untuk menampilkan data 
     return dataTask.map((value, index) => {
+      //render component
       return <TaskList Text={value.title} />;
     });
   };
