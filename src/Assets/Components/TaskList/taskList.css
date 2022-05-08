@@ -1,0 +1,14 @@
+#Task {
+    display: flex;
+    justify-content: space-between;
+    max-width: 120px;
+    border: 2px solid black;
+    margin: 8px;
+    padding: 12px;
+}
+
+#Task button {
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
