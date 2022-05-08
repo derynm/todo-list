@@ -49,6 +49,7 @@ export const MainPage = () => {
     //map data untuk menampilkan data 
     return dataTask.map((value, index) => {
       //render component
+      //mengirim id ke fungsi handleDelete kalau button di click
       return <TaskList Text={value.title} Hapus={()=>{handleDelete(value.id)}}/>;
     });
   };
