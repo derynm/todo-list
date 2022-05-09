@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+.Todo {
+    border: 2px solid black;
+    max-width: 600px;
+    margin: 100px auto 0px auto;
+    padding: 24px;
+    background-color:rgb(237, 241, 245);
+    border-radius: 8px;
+}
+
+.Todo input {
+    width: 100%;
+    max-width: 460px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.Todo button {
+    height: 38px;
+    border-radius: 4px;
+    color: whitesmoke;
+    background-color: black;
+}

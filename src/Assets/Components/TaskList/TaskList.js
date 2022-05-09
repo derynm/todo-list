@@ -4,7 +4,7 @@ import "./taskList.css"
 export const TaskList = ({Text,Hapus}) => {
   return (
     <div id='Task'>
-        <h1>{Text}</h1>
+        <h6>{Text}</h6>
         <button onClick={Hapus}>hapus</button>
     </div>
   )

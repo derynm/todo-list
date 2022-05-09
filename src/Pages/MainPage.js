@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TaskList } from "../Assets/Components/TaskList/TaskList";
-
+import "./MainPage.css";
 
 export const MainPage = () => {
   const [TaskInput, setTaskInput] = useState("");
@@ -46,39 +46,52 @@ export const MainPage = () => {
 
   const showTask = (data) => {
     let dataTask = data;
-    //map data untuk menampilkan data 
+    //map data untuk menampilkan data
     return dataTask.map((value, index) => {
       //render component
       //mengirim id ke fungsi handleDelete kalau button di click
-      return <TaskList Text={value.title} Hapus={()=>{handleDelete(value.id)}}/>;
+      return (
+        <TaskList
+          Text={value.title}
+          Hapus={() => {
+            handleDelete(value.id);
+          }}
+        />
+      );
     });
   };
 
   return (
     <div>
-      <h1> To Do App</h1>
-      <input
-        type="text"
-        value={TaskInput}
-        onChange={(e) => {
-          setTaskInput(e.target.value);
-        }}
-      />
-      {console.log(TaskInput)}
-      <button
-        onClick={() => {
-          addTask();
-        }}
-      >
-        Tambah
-      </button>
+      <div className="Todo">
+        <h1> To Do App</h1>
+        <input
+          type="text"
+          value={TaskInput}
+          onChange={(e) => {
+            setTaskInput(e.target.value);
+          }}
+        />
+        {console.log(TaskInput)}
+        <button
+          onClick={() => {
+            addTask();
+          }}
+        >
+          Tambah
+        </button>
 
-      {showTask(Task)}
+        {showTask(Task)}
 
-      {/* tombol clear */}
+        {/* tombol clear */}
 
-      <div className="tbl-clear">
-        <button onClick={() => handleClear()}>Clear</button>
+        {Task.length > 0 ? (
+          <div className="tbl-clear">
+            <button onClick={() => handleClear()}>Clear</button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
