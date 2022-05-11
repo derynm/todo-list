@@ -5,7 +5,7 @@ export const TaskList = ({Text,Hapus}) => {
   return (
     <div id='Task'>
         <h6>{Text}</h6>
-        <button onClick={Hapus}>hapus</button>
+        <button onClick={Hapus}>Delete</button>
     </div>
   )
 }

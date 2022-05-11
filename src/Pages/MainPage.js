@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 import { TaskList } from "../Assets/Components/TaskList/TaskList";
 import "./MainPage.css";
 
@@ -30,6 +31,9 @@ export const MainPage = () => {
       setTaskInput("");
     }
   };
+
+
+
 
   // handle delete
   const handleDelete = (task) => {
@@ -64,7 +68,8 @@ export const MainPage = () => {
   return (
     <div>
       <div className="Todo">
-        <h1> To Do App</h1>
+        <h1 className="txt-1"> To Do List</h1>
+        <p className="txt-2">Forget Won't Be the Reason Anymore!</p>
         <input
           type="text"
           value={TaskInput}
@@ -78,7 +83,7 @@ export const MainPage = () => {
             addTask();
           }}
         >
-          Tambah
+          Add 
         </button>
 
         {showTask(Task)}
@@ -93,6 +98,7 @@ export const MainPage = () => {
           ""
         )}
       </div>
+      <Button className="btn-play" href="https://www.chess.com/play/online">PLAY GAMES</Button>
     </div>
   );
 };

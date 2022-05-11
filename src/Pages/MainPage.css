@@ -1,14 +1,17 @@
 body {
     background-color: rgb(240, 240, 240);
+    margin-top: -500px;
 }
 
 .Todo {
+    position: relative;
     border: 2px solid black;
     max-width: 600px;
     margin: 100px auto 0px auto;
     padding: 24px;
-    background-color:rgb(237, 241, 245);
+    background-color:#03045E;
     border-radius: 8px;
+    margin-top: -500px;
 }
 
 .Todo input {
@@ -22,6 +25,20 @@ body {
 .Todo button {
     height: 38px;
     border-radius: 4px;
-    color: whitesmoke;
-    background-color: black;
+    color: black;
+    background-color: #ff0;
+}
+
+.txt-1 {
+    color: #ff0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.txt-2 {
+    color: white;
+}
+
+.btn-play {
+    margin-top: 80px;
+    margin-left: 1280px;
 }
