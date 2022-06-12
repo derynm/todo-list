@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "stagging": "git checkout development",
-    "push-stagging": "&& git add . && git commit -m && git push origin development"
+    "push-stagging": "git add . && git commit -m 'test' && git push origin development"
   },
   "eslintConfig": {
     "extends": [
