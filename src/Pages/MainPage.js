@@ -69,7 +69,7 @@ export const MainPage = () => {
     <div>
       <div className="Todo">
         <h1 className="txt-1"> To Do List (Development)</h1>
-        <p className="txt-2">Forget Won't Be the Reason Anymore!(staging)</p>
+        <p className="txt-2">Forget Won't Be the Reason Anymore!(staging3)</p>
         <input
           type="text"
           value={TaskInput}
