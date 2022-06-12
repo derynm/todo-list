@@ -68,7 +68,7 @@ export const MainPage = () => {
   return (
     <div>
       <div className="Todo">
-        <h1 className="txt-1"> To Do List</h1>
+        <h1 className="txt-1"> To Do List (Development)</h1>
         <p className="txt-2">Forget Won't Be the Reason Anymore!</p>
         <input
           type="text"
